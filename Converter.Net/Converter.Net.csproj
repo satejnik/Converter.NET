@@ -34,11 +34,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\convert.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\convert.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SignKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandShell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommandShell.1.1.0\lib\net40-client\CommandShell.dll</HintPath>
+    <Reference Include="CommandShell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=5c3172c6caaf95a2, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandShell.1.1.1\lib\net40-client\CommandShell.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory, Version=4.1.0.7915, Culture=neutral, PublicKeyToken=efe927acf176eea2, processorArchitecture=MSIL">
@@ -59,6 +65,7 @@
     <None Include="App.config" />
     <None Include="ILMerge.props" />
     <None Include="packages.config" />
+    <None Include="SignKey.snk" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Externals\ICSharpCode.NRefactory.dll" />

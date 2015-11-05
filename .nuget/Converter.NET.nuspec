@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Converter.NET</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Alexander Isakov</authors>
     <owners>Alexander Isakov</owners>
     <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
@@ -13,6 +13,6 @@
     <tags>console shell command helper library</tags>
   </metadata>
   <files>
-		<file src="..\Converter.NET\bin\Release\Converter.NET.*" target="lib\net40-client\" exclude="..\Converter.NET\bin\Release\*.pdb" />
+		<file src="..\Converter.NET\bin\Release\convert.*" target="lib\net40-client\" exclude="**\*.pdb;**\*.vshost.*;**\*.config" />
   </files>
 </package>

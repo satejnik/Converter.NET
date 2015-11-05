@@ -35,6 +35,11 @@ namespace Converter.Net.Commands
                 if (Files == null || !Files.Any()) return 0;
                 foreach (var file in Files)
                 {
+                    if (!File.Exists(file))
+                    {
+                        WriteLine("File doesn't exist: {0}", file);
+                        continue;
+                    }
                     switch (DefineFileType(file))
                     {
                         case FileType.CS:
@@ -69,23 +74,13 @@ namespace Converter.Net.Commands
             return fileName.EndsWith(".vb") ? FileType.VBNET : FileType.Unknown;
         }
 
-        private void ProcessCS(string fileName)
+        private static void ProcessCS(string fileName)
         {
-            if (!File.Exists(fileName))
-            {
-                WriteLine("File doesn't exist: {0}", fileName);
-                return;
-            }
             File.WriteAllText(Path.ChangeExtension(fileName, "vb"), Converter.ConvertCS2VBNET(File.ReadAllText(fileName)));
         }
 
-        private void ProcessVBNET(string fileName)
+        private static void ProcessVBNET(string fileName)
         {
-            if (!File.Exists(fileName))
-            {
-                WriteLine("File doesn't exist: {0}", fileName);
-                return;
-            }
             File.WriteAllText(Path.ChangeExtension(fileName, "cs"), Converter.ConvertVBNET2CS(File.ReadAllText(fileName)));
         }
 
