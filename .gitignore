@@ -1,0 +1,10 @@
+*_ReSharper*
+*.user
+*.suo
+*.gpState*
+*.DotSettings*
+*[Bb]in/
+*[Oo]bj/
+packages/
+*.nupkg
+*[Dd]eploy/

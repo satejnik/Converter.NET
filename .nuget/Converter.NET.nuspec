@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Converter.NET</id>
+    <version>1.0.0</version>
+    <authors>Alexander Isakov</authors>
+    <owners>Alexander Isakov</owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://github.com/satejnik/Converter.NET</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Tool for converting cs (C#) source code snippets to vb (VB.NET) and vice versa.</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>console shell command helper library</tags>
+  </metadata>
+  <files>
+		<file src="..\Converter.NET\bin\Release\Converter.NET.*" target="lib\net40-client\" exclude="..\Converter.NET\bin\Release\*.pdb" />
+  </files>
+</package>
